@@ -89,9 +89,11 @@ npm start
 - `GET http://localhost:8080/equipos`
 
 ---
+## Docker Compose para levantar MongoDB y Mongo Express
+![Docker](screenshots/docker.png)
 
 ## 📸 Evidencia de Funcionamiento
-
+![Consultas](screenshots/consultas.PNG)
 
 ### Consultas
 

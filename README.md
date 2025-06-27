@@ -152,7 +152,7 @@ npm start
 
 ### 2. Laboratorios con equipos disponibles
 
-![Equipos Disponibles](screenshots/equipos_disponibles.png)
+![Equipos](screenshots/equipos.PNG)
 
 ---
 
@@ -170,7 +170,7 @@ npm start
 
 ### 4. Usuarios con correo `@universidad.edu`
 
-![Usuarios con correo universitario](screenshots/usuarios_universidad.png)
+![Usuarios](screenshots/usuarios.PNG)
 
 ---
 

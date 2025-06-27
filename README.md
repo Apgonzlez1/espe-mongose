@@ -92,21 +92,28 @@ npm start
 
 ## 📸 Evidencia de Funcionamiento
 
+
+### Consultas
+
+![Consultas](screenshots/consultas.PNG)
+### Insertar datos
+
+![Insertar](screenshots/insert.PNG)
 ### Usuarios
 
-![Usuarios](screenshots/usuarios.png)
+![Usuarios](screenshots/usuarios.PNG)
 
 ---
 
 ### Laboratorios
 
-![Laboratorios](screenshots/laboratorios.png)
+![Laboratorios](screenshots/laboratorios.PNG)
 
 ---
 
 ### Equipos
 
-![Equipos](screenshots/equipos.png)
+![Equipos](screenshots/equipos.PNG)
 
 ---
 

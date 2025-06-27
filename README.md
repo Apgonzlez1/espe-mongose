@@ -94,19 +94,19 @@ npm start
 
 ### Usuarios
 
-![Usuarios](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/usuarios.png?raw=true)
+![Usuarios](screenshots/usuarios.png)
 
 ---
 
 ### Laboratorios
 
-![Laboratorios](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/laboratorios.png?raw=true)
+![Laboratorios](screenshots/laboratorios.png)
 
 ---
 
 ### Equipos
 
-![Equipos](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/equipos.png?raw=true)
+![Equipos](screenshots/equipos.png)
 
 ---
 
@@ -145,7 +145,7 @@ npm start
 
 ### 2. Laboratorios con equipos disponibles
 
-![Equipos Disponibles](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/equipos_disponibles.png?raw=true)
+![Equipos Disponibles](screenshots/equipos_disponibles.png)
 
 ---
 
@@ -163,7 +163,7 @@ npm start
 
 ### 4. Usuarios con correo `@universidad.edu`
 
-![Usuarios con correo universitario](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/usuarios_universidad.png?raw=true)
+![Usuarios con correo universitario](screenshots/usuarios_universidad.png)
 
 ---
 

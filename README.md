@@ -1,3 +1,4 @@
+
 # 🗂️ Tarea 1: Consultas Avanzadas y Relaciones con MongoDB y Mongoose
 
 ---
@@ -30,27 +31,28 @@ Esta práctica busca desarrollar consultas avanzadas y establecer relaciones ent
 
 ## 🗂️ Estructura del Proyecto
 
+```
 espe-mongoose-main/
 │
 ├── src/
-│ ├── models/
-│ │ ├── user.js
-│ │ ├── laboratorio.js
-│ │ └── equipo.js
-│ ├── scripts/
-│ │ ├── insert.js
-│ │ └── consultas.js
-│ └── server.js
+│   ├── models/
+│   │   ├── user.js
+│   │   ├── laboratorio.js
+│   │   └── equipo.js
+│   ├── scripts/
+│   │   ├── insert.js
+│   │   └── consultas.js
+│   └── server.js
 │
 ├── docker-compose.yml
 ├── package.json
 ├── .env
 ├── README.md
 └── screenshots/
-├── usuarios.png
-├── laboratorios.png
-└── equipos.png
-
+    ├── usuarios.png
+    ├── laboratorios.png
+    └── equipos.png
+```
 
 ---
 
@@ -60,50 +62,71 @@ espe-mongoose-main/
 
 ```bash
 docker-compose up -d
+```
 
-    Instalar dependencias:
+2. Instalar dependencias:
 
+```bash
 npm install
+```
 
-    Insertar datos iniciales:
+3. Insertar datos iniciales:
 
+```bash
 node src/scripts/insert.js
+```
 
-    Iniciar servidor:
+4. Iniciar servidor:
 
+```bash
 npm start
+```
 
-    Probar en Postman o navegador:
+5. Probar en Postman o navegador:
 
-    GET http://localhost:8080/users
+- `GET http://localhost:8080/users`
+- `GET http://localhost:8080/laboratorios`
+- `GET http://localhost:8080/equipos`
 
-    GET http://localhost:8080/laboratorios
+---
 
-    GET http://localhost:8080/equipos
+## 📸 Evidencia de Funcionamiento
 
-📸 Evidencia de Funcionamiento
-Usuarios
+### Usuarios
 
+![Usuarios](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/usuarios.png?raw=true)
 
-Listado de usuarios con correos válidos.
-Laboratorios
+---
 
+### Laboratorios
 
-Laboratorios registrados y sus datos.
-Equipos
+![Laboratorios](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/laboratorios.png?raw=true)
 
+---
 
-Equipos vinculados a laboratorios con su estado.
-🔎 Consultas Implementadas
-Consulta	Descripción	Método utilizado
-1. Listar todos los usuarios	Recuperar todos los documentos de usuarios	.find()
-2. Laboratorios con equipos disponibles	Filtrar equipos con estado "disponible" y mostrar laboratorio	.find() + .populate()
-3. Contar equipos por estado	Contar cantidad de equipos agrupados por estado	.countDocuments() + .aggregate()
-4. Buscar usuarios por correo	Buscar usuarios cuyo correo termine en @universidad.edu	$regex
-5. Promedio de equipos por laboratorio	Calcular promedio de equipos en cada laboratorio	$lookup, $group, $avg en aggregate()
-📖 Resultados
-1. Listar todos los usuarios
+### Equipos
 
+![Equipos](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/equipos.png?raw=true)
+
+---
+
+## 🔎 Consultas Implementadas
+
+| Consulta | Descripción | Método utilizado |
+|----------|-------------|-----------------|
+| 1. Listar todos los usuarios | Recuperar todos los documentos de usuarios | `.find()` |
+| 2. Laboratorios con equipos disponibles | Filtrar equipos con estado "disponible" y mostrar laboratorio | `.find()` + `.populate()` |
+| 3. Contar equipos por estado | Contar cantidad de equipos agrupados por estado | `.countDocuments()` + `.aggregate()` |
+| 4. Buscar usuarios por correo | Buscar usuarios cuyo correo termine en `@universidad.edu` | `$regex` |
+| 5. Promedio de equipos por laboratorio | Calcular promedio de equipos en cada laboratorio | `$lookup`, `$group`, `$avg` en `aggregate()` |
+
+---
+
+## 📖 Resultados
+
+### 1. Listar todos los usuarios
+
+```json
 [
   {
     "_id": "64abcde1234567890fghijk1",
@@ -116,42 +139,57 @@ Consulta	Descripción	Método utilizado
     "email": "carlos@universidad.edu"
   }
 ]
+```
 
-2. Laboratorios con equipos disponibles
+---
 
-3. Conteo de equipos por estado
+### 2. Laboratorios con equipos disponibles
 
+![Equipos Disponibles](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/equipos_disponibles.png?raw=true)
+
+---
+
+### 3. Conteo de equipos por estado
+
+```json
 [
   { "_id": "disponible", "cantidad": 2 },
   { "_id": "en uso", "cantidad": 1 },
   { "_id": "mantenimiento", "cantidad": 1 }
 ]
+```
 
-4. Usuarios con correo @universidad.edu
+---
 
-5. Promedio de equipos por laboratorio
+### 4. Usuarios con correo `@universidad.edu`
 
+![Usuarios con correo universitario](https://github.com/Apgonzlez1/espe-mongose/blob/main/screenshots/usuarios_universidad.png?raw=true)
+
+---
+
+### 5. Promedio de equipos por laboratorio
+
+```json
 [
   { "laboratorio": "Laboratorio de Redes", "promedioEquipos": 2 },
   { "laboratorio": "Laboratorio de Electrónica", "promedioEquipos": 2 }
 ]
+```
 
-📝 Conclusiones
+---
 
-    Se consolidó la comprensión sobre consultas avanzadas y relaciones en MongoDB con Mongoose.
+## 📝 Conclusiones
 
-    Las referencias entre colecciones y .populate() facilitan la gestión de datos relacionados.
+- Se consolidó la comprensión sobre consultas avanzadas y relaciones en MongoDB con Mongoose.  
+- Las referencias entre colecciones y `.populate()` facilitan la gestión de datos relacionados.  
+- Docker Compose agilizó la creación y administración del entorno de base de datos.  
+- Validar datos y manejar correctamente las consultas es vital para mantener integridad.  
 
-    Docker Compose agilizó la creación y administración del entorno de base de datos.
+---
 
-    Validar datos y manejar correctamente las consultas es vital para mantener integridad.
+## 📚 Referencias
 
-📚 Referencias
-
-    Mongoose Documentation
-
-    MongoDB Aggregation
-
-    Docker Compose
-
-    Express.js
+- [Mongoose Documentation](https://mongoosejs.com/docs/guide.html)  
+- [MongoDB Aggregation](https://docs.mongodb.com/manual/aggregation/)  
+- [Docker Compose](https://docs.docker.com/compose/)  
+- [Express.js](https://expressjs.com/)
